@@ -120,7 +120,7 @@ export default {
     _reverseGeoCode: async function (loc) {
       const resp = await axios.get("https://api.nextbillion.io/h/revgeocode", {
         params: {
-          key: process.env.NEXTBILLION_API_KEY,
+          key: import.meta.env.VITE_NEXTBILLION_API_KEY,
           at: `${loc.lat},${loc.lng}`,
         },
       });
@@ -140,7 +140,7 @@ export default {
     discover: async function () {
       const resp = await axios.get("https://api.nextbillion.io/h/discover", {
         params: {
-          key: process.env.NEXTBILLION_API_KEY,
+          key: import.meta.env.VITE_NEXTBILLION_API_KEY,
           q: this.q,
           at: `${this.userLocation.lat},${this.userLocation.lng}`,
         },
