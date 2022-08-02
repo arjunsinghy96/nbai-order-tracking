@@ -7,8 +7,8 @@ import "./assets/main.css";
 import App from "./App.vue";
 import router from "./router";
 
-nextbillion.setApiKey(process.env.NEXTBILLION_API_KEY);
-nextbillion.setApiHost(process.env.NEXTBILLION_API_HOST);
+nextbillion.setApiKey(import.meta.env.VITE_NEXTBILLION_API_KEY);
+nextbillion.setApiHost(import.meta.env.VITE_NEXTBILLION_API_HOST);
 
 
 const app = createApp(App);
